@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login - rslvd.net</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Technitium DNS</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="/register">Register</a></li>
+        <li><a href="/login">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>Login to Manage Your Subdomain</h2>
+    <form id="loginForm" method="post" action="/api/auth/login">
+      <div class="form-group">
+        <label for="username">Subdomain Username:</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="yourname" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-success">Login</button>
+    </form>
+  </div>
+</body>
+</html>
