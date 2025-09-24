@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ApplicationIcon>logo2.ico</ApplicationIcon>
+		<Version>13.6</Version>
+		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+		<Company>Technitium</Company>
+		<Product>Technitium DNS Server</Product>
+		<Authors>Shreyas Zare</Authors>
+		<AssemblyName>DnsServerApp</AssemblyName>
+		<RootNamespace>DnsServerApp</RootNamespace>
+		<StartupObject>DnsServerApp.Program</StartupObject>
+		<PackageProjectUrl>https://technitium.com/dns/</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/TechnitiumSoftware/DnsServer</RepositoryUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\DnsServerCore\DnsServerCore.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="start.bat">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="start.sh">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+		<None Update="systemd.service">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
+</Project>
